@@ -1,4 +1,7 @@
 package com.online.test.onlinetest.models;
+
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +19,8 @@ import lombok.Setter;
 @Table(name="TBL_OPTIONS")
 @Getter
 @Setter
-public class Option {
+
+public class Option{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -28,6 +33,5 @@ public class Option {
 
     @ManyToOne
     @JoinColumn(name="QUESTION_ID", nullable=false)
-    private Question question;
-    
+    private Question question; 
 }
