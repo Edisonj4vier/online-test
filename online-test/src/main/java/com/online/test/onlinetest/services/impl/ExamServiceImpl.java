@@ -44,7 +44,7 @@ public class ExamServiceImpl implements ExamService {
             throw new Exception("Exan not found");
         }
         //.orElseThrow(()-> new Exception("Exam not found"));
-        return modelMapper.map(exam, ExamDTO.class);
+        return modelMapper.map(exam.get(), ExamDTO.class);
     }
 
     @Override
